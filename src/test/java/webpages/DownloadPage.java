@@ -10,10 +10,5 @@ public class DownloadPage extends PageObject {
 		super(driver);
 	}
 	
-	public static String getURL() {
-		return url;
-	}
-	
-	
 
 }
