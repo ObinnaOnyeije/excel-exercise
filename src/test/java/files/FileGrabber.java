@@ -1,7 +1,16 @@
 package files;
 
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import webpages.*;
 
 public class FileGrabber 
 {
@@ -20,6 +29,9 @@ public class FileGrabber
 	        options.addArguments("start-maximized");
 	        WebDriver driver = new ChromeDriver(options);
 	        driver.navigate().to("https://data.europa.eu/euodp/en/data/dataset/eu-expenditure-and-revenue-2014-2020");
+	        DownloadPage downloadPage = new DownloadPage(driver);
+	        downloadPage.clickPopupButton();
+	        downloadPage.clickDownloadLink();
 	}
 	
 }
