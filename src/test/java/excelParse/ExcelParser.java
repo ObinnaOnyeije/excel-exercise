@@ -1,6 +1,7 @@
 package excelParse;
 
-import webpages.
+import java.io.File;
+import java.io.FileInputStream;
 
 import org.apache.poi.ss.usermodel.Cell; 
 import org.apache.poi.ss.usermodel.Row; 
@@ -11,13 +12,16 @@ public class ExcelParser {
 
 	public static void main(String[] args) { 
 		
-		File excel = new File("C://temp/Employee.xlsx"); 
-		FileInputStream fis = new FileInputStream(excel); 
-		XSSFWorkbook book = new XSSFWorkbook(fis); 
-		XSSFSheet sheet = book.getSheetAt(0);
-		
-		Cell cell = 
-		
+		try {
+			File excel = new File("src/"); 
+			FileInputStream fis = new FileInputStream(excel); 
+			XSSFWorkbook book = new XSSFWorkbook(fis); 
+			XSSFSheet sheet = book.getSheetAt(0);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 }
