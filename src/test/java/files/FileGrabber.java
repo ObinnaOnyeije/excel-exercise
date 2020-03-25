@@ -16,7 +16,7 @@ public class FileGrabber
 {
 	
 	public static void getData() {
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Weshi\\Desktop\\java\\chromedriver.exe");
+//		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Weshi\\Desktop\\java\\chromedriver.exe");
 		 ChromeOptions options = new ChromeOptions();
 	        Map<String, Object> prefs = new HashMap<String, Object>();
 	        prefs.put("download.prompt_for_download", false);
@@ -32,6 +32,10 @@ public class FileGrabber
 	        DownloadPage downloadPage = new DownloadPage(driver);
 	        downloadPage.clickPopupButton();
 	        downloadPage.clickDownloadLink();
+	}
+	
+	public static void main(String[] args) {
+		getData();
 	}
 	
 }

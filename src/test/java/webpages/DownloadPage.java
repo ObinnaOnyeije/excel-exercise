@@ -9,7 +9,7 @@ public class DownloadPage extends PageObject {
 	@FindBy(xpath = "//*[@id=\"dataset-resources\"]/div/ul/li[2]/span[1]/a")
 	private WebElement downloadLink;
 	
-	@FindBy(xpath = "//*[@id=\\\"popup-buttons\\\"]/button[1]")
+	@FindBy(xpath = "//*[@id=\"popup-buttons\"]/button[1]")
 	private WebElement popupButton;
 	
 	public DownloadPage(WebDriver driver) {
