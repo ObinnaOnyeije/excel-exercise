@@ -13,7 +13,7 @@ public class ExcelParser {
 	public static void main(String[] args) { 
 		
 		try {
-			File excel = new File("src/"); 
+			File excel = new File("src/main/resources"); 
 			FileInputStream fis = new FileInputStream(excel); 
 			XSSFWorkbook book = new XSSFWorkbook(fis); 
 			XSSFSheet sheet = book.getSheetAt(0);
